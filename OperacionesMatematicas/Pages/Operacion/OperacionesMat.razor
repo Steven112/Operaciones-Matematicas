@@ -1,0 +1,24 @@
+﻿@page "/Operaciones Matematicas"
+<h3>Operaciones</h3>
+
+<input type="number" @bind="n1" />
+<input type="number" @bind="n2"/>
+<p>La suma es: @suma</p>
+<p>La resta es: @resta</p>
+<p>La multiplicacion es: @multiplicacion</p>
+<button class="btn btn-primary" @onclick="Operaciones">Click me</button>
+@code {
+
+    private int n1, n2;
+    private int suma = 0;
+    private int multiplicacion = 0;
+    private int resta = 0;
+
+    private void Operaciones()
+    {
+        suma = n1 + n2;
+        resta = n1 - n2;
+        multiplicacion = n1 * n2;
+    }
+   
+}
